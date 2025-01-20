@@ -54,8 +54,13 @@
     font-size: 1rem;
     color: #3A3A3A;
 }
+
 .banner-image{
+    /* background-color: red; */
     background-image: url("../images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
 }
 .banner-btn{
     margin-top: 10px;
@@ -72,14 +77,74 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.collection{
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.collection>h3{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+.collection-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.collection-card{
+    width: 330px;
+    height: 470px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 10px 10px 50px #AAAAAA;
+}
+.collection-card img{
+    width: 100%;
+    object-fit: cover;
+}
+.feature{
+    padding: 80px 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.feature-con{
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 30px;
+}
+.foot{
+    width: 100%;
+    background-color: #0A0826;
+    text-align: center;
+    color: white;
+}
+.footer-title{
+    padding-top: 20px;
+}
+.footer-dis{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.foot-icons{
+    padding-bottom: 20px;
+}
 @media screen and (max-width: 575px) {
     .navbar{
         flex-direction: column
     }
     .banner{
         flex-direction: column-reverse;
-
+    }
+    .banner-image{
+       
     }
     .banner-contact{
         display: flex;
@@ -88,7 +153,7 @@
         align-items: center;
         margin: 0 auto;
         text-align: center;
-    }
+    } 
     .company-icon{
         gap: 20px;
         padding: 30px 30px;
@@ -99,11 +164,49 @@
     }
     .company-icon img{
         width: 60px;
+        background-size: 100px;
+    }
+    .banner-image{
+        padding: 30px;
+    }
+    .banner-image img{
+        width: 300px;
+        height: 300px;
+    }
+    .collection-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+    }
+    .feature{
+     flex-direction:column-reverse;
+    }
+    .feature-con{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 0;
+    }
+   
+    .feature-dis{
+        width: 300px;
     }
 }
 
 @media screen and (min-width: 575px) and (max-width : 992px){
     .navbar{
         flex-direction: column
+    }
+    .collection-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
     }
 }
